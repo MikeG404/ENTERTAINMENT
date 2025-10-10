@@ -1,5 +1,6 @@
+import styles from './nav.module.css'
 import { NavLink } from 'react-router-dom';
-import { IconNavMovies, IconNavHome, IconNavBookmark, IconNavTvSeries } from '../assets/index';
+import { IconNavMovies, IconNavHome, IconNavBookmark, IconNavTvSeries } from '../../assets/index';
 
 const navigation = [
     {
@@ -29,7 +30,7 @@ const Nav = () => {
 
 
     return (
-        <nav>
+        <nav className={styles.navContainer}>
             {navigation.map((elem, idx) => (
                 <NavLink key={idx} to={elem.route} end>
                     <img src={elem.src} alt={elem.alt} />

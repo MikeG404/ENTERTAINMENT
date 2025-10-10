@@ -1,13 +1,14 @@
-import Logo from '../assets/logo.svg'
-import Avatar from '../assets/image-avatar.png'
-import Nav from './Nav';
+import styles from './header.module.css'
+import Logo from '../../assets/logo.svg'
+import Avatar from '../../assets/image-avatar.png'
+import Nav from '../Nav/Nav';
 
 
 
 const Header = () => {
 
     return (
-        <header>
+        <header className={styles.headerContainer}>
             <div>
                 <img src={Logo} alt="Logo" />
             </div>
