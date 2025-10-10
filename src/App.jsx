@@ -9,13 +9,12 @@ function App() {
 		<>
 			<Routes>
 				<Route element={<MainLayout />}>
-					<Route path='/' element={<HomePage />} />
-					<Route path="/movie" element={<MoviePage />}></Route>
-					<Route path="/serie" element={<SeriePage />}></Route>
-					<Route path="/bookmark" element={<BookmarkPage />}></Route>
+					<Route index element={<HomePage />} />
+					<Route path="/movies" element={<MoviePage />}></Route>
+					<Route path="/series" element={<SeriePage />}></Route>
+					<Route path="/bookmarks" element={<BookmarkPage />}></Route>
 				</Route>
 			</Routes>
-
 		</>
 	)
 }
