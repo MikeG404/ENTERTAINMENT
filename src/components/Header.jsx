@@ -1,4 +1,5 @@
 import Logo from '../assets/logo.svg'
+import Avatar from '../assets/image-avatar.png'
 import Nav from './Nav';
 
 
@@ -12,7 +13,7 @@ const Header = () => {
             </div>
             <Nav />
             <div>
-                <img src="" alt="" />
+                <img src={Avatar} alt="Avatar" />
             </div>
         </header>
     )

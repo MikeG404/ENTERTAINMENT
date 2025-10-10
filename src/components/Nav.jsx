@@ -29,15 +29,13 @@ const Nav = () => {
 
 
     return (
-        <>
-            <nav>
-            { navigation.map((elem, idx) => (
+        <nav>
+            {navigation.map((elem, idx) => (
                 <NavLink key={idx} to={elem.route} end>
                     <img src={elem.src} alt={elem.alt} />
                 </NavLink>
             ))}
-            </nav>
-        </>
+        </nav>
     )
 }
 
