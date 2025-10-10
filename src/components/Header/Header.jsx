@@ -9,11 +9,11 @@ const Header = () => {
 
     return (
         <header className={styles.headerContainer}>
-            <div>
+            <div id='logo'>
                 <img src={Logo} alt="Logo" />
             </div>
             <Nav />
-            <div>
+            <div className={styles.avatar}>
                 <img src={Avatar} alt="Avatar" />
             </div>
         </header>
