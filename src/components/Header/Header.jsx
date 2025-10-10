@@ -1,4 +1,4 @@
-import styles from './header.module.css'
+import styles from './header.module.scss'
 import Logo from '../../assets/logo.svg'
 import Avatar from '../../assets/image-avatar.png'
 import Nav from '../Nav/Nav';

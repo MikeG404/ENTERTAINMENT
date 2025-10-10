@@ -1,4 +1,4 @@
-import styles from './nav.module.css'
+import styles from './nav.module.scss'
 import { NavLink } from 'react-router-dom';
 import { IconNavMovies, IconNavHome, IconNavBookmark, IconNavTvSeries } from '../../assets/index';
 

@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import MainLayout from './components/MainLayout'
 import { MoviePage, SeriePage, BookmarkPage, HomePage } from './pages/index'
-import './App.css'
+import './App.scss'
 
 function App() {
 
