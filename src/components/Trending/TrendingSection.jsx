@@ -1,8 +1,17 @@
+import styles from "./trendingsection.module.scss";
+import smallThumb from "../../assets/thumbnails/beyond-earth/trending/small.jpg";
+
+
 const TrendingSection = () => {
 
     return (
-        <section>
+        <section className={styles.trendingContainer}>
             <h1>Trending</h1>
+            <div className={styles.carrousel}>
+                <img src={smallThumb} alt="Beyond Earth" height="140" width="240"/>
+                <img src={smallThumb} alt="Beyond Earth" height="140" width="240"/>
+                <img src={smallThumb} alt="Beyond Earth" height="140" width="240"/>
+            </div>
         </section>
     )
 }

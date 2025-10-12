@@ -1,0 +1,15 @@
+.trendingContainer {
+
+    .carrousel {
+        display: flex;
+        gap: var(--spacing-200);
+        overflow-x: scroll;
+        white-space: nowrap;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer / Edge */
+    }
+
+    .carrousel::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+}
