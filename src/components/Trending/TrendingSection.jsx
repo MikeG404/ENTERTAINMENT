@@ -8,9 +8,9 @@ const TrendingSection = () => {
         <section className={styles.trendingContainer}>
             <h2 className={styles.title}>Trending</h2>
             <div className={styles.carrousel}>
-                <img src={smallThumb} alt="Beyond Earth" height="140" width="240"/>
-                <img src={smallThumb} alt="Beyond Earth" height="140" width="240"/>
-                <img src={smallThumb} alt="Beyond Earth" height="140" width="240"/>
+                <img className={styles.item} src={smallThumb} alt="Beyond Earth" height="140" width="240"/>
+                <img className={styles.item} src={smallThumb} alt="Beyond Earth" height="140" width="240"/>
+                <img className={styles.item} src={smallThumb} alt="Beyond Earth" height="140" width="240"/>
             </div>
         </section>
     )
