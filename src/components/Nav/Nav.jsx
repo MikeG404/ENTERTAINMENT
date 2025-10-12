@@ -28,12 +28,13 @@ const navigation = [
 
 const Nav = () => {
 
-
     return (
         <nav className={styles.navContainer}>
             {navigation.map((elem, idx) => (
-                <NavLink key={idx} to={elem.route} end>
-                    <img src={elem.src} alt={elem.alt} />
+                <NavLink key={idx} to={elem.route} end className={({ isActive }) =>
+                    isActive ? `${styles.active}` : ""
+                }>
+                    <img className={styles.image} src={elem.src} alt={elem.alt} />
                 </NavLink>
             ))}
         </nav>
