@@ -1,8 +1,11 @@
+
 const BookmarkPage = () => {
 
     return (
-        <h1>Bookmark Page</h1>
+        <div>
+            <h1>Bookmark page</h1>
+        </div>
     )
 }
 
-export default BookmarkPage;
+export default BookmarkPage

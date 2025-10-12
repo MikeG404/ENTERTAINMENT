@@ -1,11 +1,10 @@
 import styles from "./trendingcard.module.scss"
-import smallThumb from "../../../assets/thumbnails/beyond-earth/trending/small.jpg";
 
-const TrendingCard = () => {
+const TrendingCard = ({ image, title }) => {
 
     return (
         <div className={styles.itemContainer}>
-            <img className={styles.image} src={smallThumb} alt="Beyond Earth" />
+            <img className={styles.image} src={image} alt={title} loading="lazy"/>
         </div>
     )
 }
