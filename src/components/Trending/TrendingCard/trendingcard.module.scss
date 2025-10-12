@@ -1,4 +1,10 @@
-.item {
+.itemContainer {
     scroll-snap-align: start;
-    border-radius: var(--rounded);
+
+    .image {
+        width: 24rem;
+        height: 14rem;
+        object-fit: cover;
+        border-radius: var(--rounded);
+    }
 }

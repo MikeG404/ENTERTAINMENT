@@ -4,8 +4,8 @@ import smallThumb from "../../../assets/thumbnails/beyond-earth/trending/small.j
 const TrendingCard = () => {
 
     return (
-        <div>
-            <img className={styles.item} src={smallThumb} alt="Beyond Earth" height="140" width="240" />
+        <div className={styles.itemContainer}>
+            <img className={styles.image} src={smallThumb} alt="Beyond Earth" />
         </div>
     )
 }
