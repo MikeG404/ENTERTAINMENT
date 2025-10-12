@@ -1,4 +1,10 @@
 .trendingContainer {
+    padding-left: var(--spacing-200);
+    
+    .title {
+        color: white;
+        padding-bottom: var(--spacing-200);
+    }
 
     .carrousel {
         display: flex;

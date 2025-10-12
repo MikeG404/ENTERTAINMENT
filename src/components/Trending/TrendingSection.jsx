@@ -6,7 +6,7 @@ const TrendingSection = () => {
 
     return (
         <section className={styles.trendingContainer}>
-            <h1>Trending</h1>
+            <h2 className={styles.title}>Trending</h2>
             <div className={styles.carrousel}>
                 <img src={smallThumb} alt="Beyond Earth" height="140" width="240"/>
                 <img src={smallThumb} alt="Beyond Earth" height="140" width="240"/>
