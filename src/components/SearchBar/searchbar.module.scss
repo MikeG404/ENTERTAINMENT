@@ -1,0 +1,16 @@
+.searchBarContainer {
+    display: flex;
+    align-items: center;
+    padding-inline: var(--spacing-200);
+    padding-block: var(--spacing-300);
+    
+    .input {
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: var(--blue-950);
+        margin-left: var(--spacing-200);
+    }
+
+    
+}
