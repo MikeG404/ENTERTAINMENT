@@ -5,22 +5,4 @@
         color: white;
         padding-bottom: var(--spacing-200);
     }
-
-    .carrousel {
-        display: flex;
-        gap: var(--spacing-200);
-        overflow-x: scroll;
-        white-space: nowrap;
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none; /* Internet Explorer / Edge */
-        scroll-snap-type: x mandatory;
-    }
-
-    .carrousel::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera */
-    }
-
-    .item {
-        scroll-snap-align: start;
-    }
 }

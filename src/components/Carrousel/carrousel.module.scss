@@ -1,0 +1,17 @@
+.carrousel {
+    display: flex;
+    gap: var(--spacing-200);
+    overflow-x: scroll;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer / Edge */
+
+    .item {
+        scroll-snap-align: start;
+    }
+}
+
+.carrousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
