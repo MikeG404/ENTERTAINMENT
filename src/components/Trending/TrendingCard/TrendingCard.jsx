@@ -1,10 +1,15 @@
 import styles from "./trendingcard.module.scss"
-import { IconCategoryMovie } from "../../../assets/index"
+import { IconCategoryMovie, IconBookmarkEmpty } from "../../../assets/index"
 
 const TrendingCard = ({ image, title }) => {
 
     return (
         <div className={styles.itemContainer}>
+            <div className={styles.bookmarkIcon}>
+                <div className={styles.circle}>
+                    <img src={IconBookmarkEmpty} alt="Bookmark Icon" />
+                </div>
+            </div>
             <div className={styles.cardInfos}>
                 <div className={styles.upperCardInfos}>
                     <p>2019</p>

@@ -3,6 +3,23 @@
 .itemContainer {
     position: relative;
     scroll-snap-align: start;
+
+    .bookmarkIcon {
+        
+        .circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: var(--spacing-100);
+            right: var(--spacing-100);
+            width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 100%;
+            background-color: black;
+            opacity: 50%;
+        }
+    }
     
     .cardInfos {
         display: flex;
