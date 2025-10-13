@@ -1,5 +1,28 @@
 .itemContainer {
+    position: relative;
     scroll-snap-align: start;
+    
+    .cardInfos {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-100);
+        color: aliceblue;
+        position: absolute;
+        bottom: var(--spacing-200);
+        left: var(--spacing-200);
+        z-index: 10;
+
+        .upperCardInfos {
+            display: flex;
+            gap: var(--spacing-100);
+            width: 100%;
+
+            .category {
+                display: flex;
+                gap: var(--spacing-100);
+            }
+        }
+    }
 
     .image {
         width: 24rem;
@@ -7,4 +30,5 @@
         object-fit: cover;
         border-radius: var(--rounded);
     }
+
 }
