@@ -1,0 +1,17 @@
+.bookmarkContainer {
+    
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: var(--spacing-100);
+        right: var(--spacing-100);
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 100%;
+        background-color: black;
+        opacity: 50%;
+        cursor: pointer;
+    }
+}
