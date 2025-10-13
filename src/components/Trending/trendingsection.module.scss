@@ -1,7 +1,10 @@
+@import "../../index.scss";
+
 .trendingContainer {
     padding-left: var(--spacing-200);   
     .title {
         color: white;
         padding-bottom: var(--spacing-200);
+        @extend .text-preset-m1;
     }
 }

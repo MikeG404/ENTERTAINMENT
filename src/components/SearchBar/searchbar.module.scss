@@ -1,3 +1,5 @@
+@import "../../index.scss"; 
+
 .searchBarContainer {
     display: flex;
     align-items: center;
@@ -10,5 +12,6 @@
         outline: none;
         background-color: var(--blue-950);
         margin-left: var(--spacing-200);
+        @extend .text-preset-m1;
     }
 }
