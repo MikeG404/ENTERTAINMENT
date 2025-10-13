@@ -1,12 +1,15 @@
 import styles from "./trendingcard.module.scss"
 import { IconCategoryMovie } from "../../../assets/index"
 import BookmarkButton from "../../Bookmark/BookmarkButton";
+import { useMovieStore } from "../../../stores/useMovieStore";
 
-const TrendingCard = ({ image, title }) => {
+const TrendingCard = ({id, image, title }) => {
+    const isBookmarked = useMovieStore((s) => s.isBookmarked(id))
+    const toggleBookmark = useMovieStore((s) => s.toggleBookmark)
 
     return (
         <div className={styles.itemContainer}>
-            <BookmarkButton />
+            <BookmarkButton isBookmarked={isBookmarked} onToggle={() => toggleBookmark(id)}/>
             <div className={styles.cardInfos}>
                 <div className={styles.upperCardInfos}>
                     <p>2019</p>

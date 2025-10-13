@@ -1,16 +1,18 @@
 import styles from './bookmark.module.scss'
-import { IconBookmarkEmpty } from "../../assets/index";
+import { IconBookmarkEmpty, IconBookmarkFull } from "../../assets/index";
 
 
-const BookmarkButton = () => {
-
+const BookmarkButton = ({ isBookmarked, onToggle}) => {
     return (
         <div className={styles.bookmarkContainer}>
-            <button className={styles.circle}>
-                <img src={IconBookmarkEmpty} alt="Bookmark Icon" />
+            <button 
+                className={styles.circle}
+                onClick={onToggle}
+                >
+                <img src={isBookmarked ? IconBookmarkFull : IconBookmarkEmpty} alt="Bookmark Icon" />
             </button>
         </div>
     )
 }
 
-export default BookmarkButton;
+export default BookmarkButton;  

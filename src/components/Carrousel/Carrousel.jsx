@@ -7,8 +7,8 @@ const Carrousel = () => {
 
     return (
         <div className={styles.carrousel}>
-            { movies.map(({id, ...movie}) => {
-                return <TrendingCard key={id} {...movie}/>
+            { movies.map((elem) => {
+                return <TrendingCard key={elem.id} id={elem.id} image={elem.image} title={elem.title} />
             })}
         </div>
     )
