@@ -16,7 +16,7 @@ const TrendingCard = ({ image, title }) => {
                     <span>.</span>
                     <p>PG</p>
                 </div>
-                <p>{ title }</p>
+                <p className={styles.title}>{ title }</p>
             </div>
             <img className={styles.image} src={image} alt={title} loading="lazy"/>
         </div>

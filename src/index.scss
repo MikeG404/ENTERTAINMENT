@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap');
+
 :root {
     --blue-500: #5A698F;
     --blue-900: #161D2F;
@@ -9,6 +11,9 @@
     --spacing-1000: 8rem;
 
     --rounded: 0.8rem;
+
+    --font-sans: 'Outfit', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    --lh-125: 1.25;
 }
 
 * {
@@ -22,4 +27,102 @@ html {
 
 body {
     background-color: var(--blue-950);
+}
+
+.text-preset-1 {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 32px;
+  line-height: var(--lh-125);
+  letter-spacing: -0.5px;
+}
+
+.text-preset-2m {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: var(--lh-125);
+  letter-spacing: 0;
+}
+
+.text-preset-2l {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 24px;
+  line-height: var(--lh-125);
+  letter-spacing: 0;
+}
+
+.text-preset-3 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: var(--lh-125);
+  letter-spacing: 0;
+}
+
+.text-preset-4 {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: var(--lh-125);
+  letter-spacing: 0;
+}
+
+.text-preset-5 {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 13px;
+  line-height: var(--lh-125);
+  letter-spacing: 0;
+}
+
+// MOBILE PRESET
+
+.text-preset-m1 {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 20px;
+  line-height: var(--lh-125);
+  letter-spacing: -0.3px;
+}
+
+.text-preset-m2 {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: var(--lh-125);
+  letter-spacing: 0;
+}
+
+.text-preset-m3 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: var(--lh-125);
+  letter-spacing: 0;
+}
+
+.text-preset-m4 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: var(--lh-125);
+  letter-spacing: 0;
+}
+
+.text-preset-m5 {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 12px;
+  line-height: var(--lh-125);
+  letter-spacing: 0;
+}
+
+.text-preset-m6 {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 11px;
+  line-height: var(--lh-125);
+  letter-spacing: 0;
 }

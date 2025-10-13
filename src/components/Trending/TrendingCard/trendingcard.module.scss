@@ -1,3 +1,5 @@
+@import "../../../index.scss";
+
 .itemContainer {
     position: relative;
     scroll-snap-align: start;
@@ -11,16 +13,22 @@
         bottom: var(--spacing-200);
         left: var(--spacing-200);
         z-index: 10;
-
+        
         .upperCardInfos {
             display: flex;
             gap: var(--spacing-100);
             width: 100%;
+            @extend .text-preset-m5;
+            opacity: 75%;
 
             .category {
                 display: flex;
                 gap: var(--spacing-100);
             }
+        }
+
+        .title {
+            @extend .text-preset-m3;
         }
     }
 
