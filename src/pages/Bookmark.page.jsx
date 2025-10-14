@@ -1,10 +1,14 @@
+import { Fragment } from "react"
+import MediaGallery from "../components/MediaGallery/MediaGalleryLayout"
 
 const BookmarkPage = () => {
 
     return (
-        <div>
-            <h1>Bookmark page</h1>
-        </div>
+        <Fragment>
+            <h2 className="text-preset-m1" style={{paddingBlock: "var(--spacing-200)", paddingInline: "var(--spacing-200)"}}>Bookmarked Movies</h2>
+            <MediaGallery />
+            <h2 className="text-preset-m1" style={{paddingBlock: "var(--spacing-200)", paddingInline: "var(--spacing-200)"}}>Bookmarked Series</h2>
+        </Fragment>
     )
 }
 

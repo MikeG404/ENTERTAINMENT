@@ -1,0 +1,6 @@
+.mediaGalleryContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-200);
+    padding: var(--spacing-200);
+}

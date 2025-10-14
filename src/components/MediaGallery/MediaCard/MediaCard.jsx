@@ -1,17 +1,16 @@
-import styles from "./trendingcard.module.scss"
+import styles from "./mediacard.module.scss"
 import { IconCategoryMovie } from "../../../assets/index"
 import BookmarkButton from "../../Bookmark/BookmarkButton";
 import { useMovieStore } from "../../../stores/useMovieStore";
 
-const TrendingCard = ({id, image, title, year }) => {
+const MediaCard = ({id, image, title, year }) => {
     const isBookmarked = useMovieStore((s) => s.isBookmarked(id))
     const toggleBookmark = useMovieStore((s) => s.toggleBookmark)
 
     return (
         <div className={styles.itemContainer}>
             <BookmarkButton isBookmarked={isBookmarked} onToggle={() => toggleBookmark(id)}/>
-
-            {/* TODO: NEW COMPONENTS HERE */}
+            <img className={styles.image} src={image} alt={title} loading="lazy"/>
             <div className={styles.cardInfos}>
                 <div className={styles.upperCardInfos}>
                     <p>{ year }</p>
@@ -25,11 +24,8 @@ const TrendingCard = ({id, image, title, year }) => {
                 </div>
                 <p className={styles.title}>{ title }</p>
             </div>
-
-
-            <img className={styles.image} src={image} alt={title} loading="lazy"/>
         </div>
     )
 }
 
-export default TrendingCard;
+export default MediaCard;
