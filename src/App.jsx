@@ -17,8 +17,8 @@ function App() {
 							<Route path="/movies" element={<MoviePage />}></Route>
 							<Route path="/series" element={<SeriePage />}></Route>
 						</Route>
-						<Route path="/bookmarks" element={<BookmarkPage />}></Route>
 					</Route>
+					<Route path="/bookmarks" element={<BookmarkPage />}></Route>
 				</Route>
 			</Routes>
 		</>
