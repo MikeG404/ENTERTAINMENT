@@ -4,20 +4,19 @@ import { Outlet, useLocation } from 'react-router-dom';
 import MediaGallery from './MediaGallery.jsx';
 
 const MediaGalleryLayout = () => {
-    const movies = useMovieStore((s) => s.movies);
-    const tvSeries = useMovieStore((s) => s.tvSeries);
+    const media = useMovieStore((s) => s.media);
     const location = useLocation(); // Détecte la route actuelle
     
 
     let sectionTitle = "Recommended for you";
-    let mediaType = movies.concat(tvSeries);
+    let mediaType = media;
     
     if (location.pathname === '/movies') {
         sectionTitle = "Movies";
-        mediaType = movies;
+        mediaType = media.filter((elem) => elem.category === "Movie");
     } else if (location.pathname === '/series') {
         sectionTitle = "TV Series";
-        mediaType = tvSeries;
+        mediaType = media.filter((elem) => elem.category === "TV Series");
     }
 
     return (
