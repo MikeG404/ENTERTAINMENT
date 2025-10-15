@@ -13,6 +13,7 @@ const MediaGallery = ({movies, sectionTitle}) => {
                         image={movie.image}
                         title={movie.title}
                         year={movie.year}
+                        category={movie.category}
                         />
                 })}
             </div>

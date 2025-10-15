@@ -1,9 +1,9 @@
 import styles from "./mediacard.module.scss"
-import { IconCategoryMovie } from "../../../assets/index"
+import { IconCategoryMovie, IconCategoryTv } from "../../../assets/index"
 import BookmarkButton from "../../Bookmark/BookmarkButton";
 import { useMovieStore } from "../../../stores/useMovieStore";
 
-const MediaCard = ({id, image, title, year }) => {
+const MediaCard = ({id, image, title, year, category }) => {
     const isBookmarked = useMovieStore((s) => s.isBookmarked(id))
     const toggleBookmark = useMovieStore((s) => s.toggleBookmark)
 
@@ -16,8 +16,8 @@ const MediaCard = ({id, image, title, year }) => {
                     <p>{ year }</p>
                     <span>.</span>
                     <div className={styles.category}>
-                        <img src={IconCategoryMovie} alt="" />
-                        <p>Movie</p>
+                        <img src={category === "Movie" ? IconCategoryMovie : IconCategoryTv} alt="" />
+                        <p>{ category }</p>
                     </div>
                     <span>.</span>
                     <p>PG</p>
