@@ -159,9 +159,10 @@ export const useMovieStore = create(
           image: "https://image.tmdb.org/t/p/w500/fC2HDm5t0kHl7mTm7jxMR31b7by.jpg",
         },
       ],
-
-
       bookmarks: [],
+      searchQuery: "",
+      setSearchQuery: (query) => set({ searchQuery: query }),
+
       toggleBookmark: (id) => {
         const { bookmarks } = get();
         const exists = bookmarks.includes(id);
@@ -172,8 +173,5 @@ export const useMovieStore = create(
         set({ bookmarks: next })
       },
       isBookmarked: (id) => get().bookmarks.includes(id),
-      getBookmarkedMedia: () => {
-        const { media, bookmarks} = get();
-        return media.filter((elem) => bookmarks.includes(elem.id))
-      }
+
     })));

@@ -16,7 +16,7 @@ const MediaCard = ({id, image, title, year, category }) => {
                     <p>{ year }</p>
                     <span>.</span>
                     <div className={styles.category}>
-                        <img src={category === "Movie" ? IconCategoryMovie : IconCategoryTv} alt="" />
+                        <img src={category === "Movie" ? IconCategoryMovie : IconCategoryTv} alt="Category icon" />
                         <p>{ category }</p>
                     </div>
                     <span>.</span>
