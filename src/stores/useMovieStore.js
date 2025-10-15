@@ -171,5 +171,9 @@ export const useMovieStore = create(
 
         set({ bookmarks: next })
       },
-      isBookmarked: (id) => get().bookmarks.includes(id)
+      isBookmarked: (id) => get().bookmarks.includes(id),
+      getBookmarkedMedia: () => {
+        const { media, bookmarks} = get();
+        return media.filter((elem) => bookmarks.includes(elem.id))
+      }
     })));

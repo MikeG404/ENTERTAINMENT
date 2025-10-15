@@ -5,7 +5,7 @@ import MediaGallery from './MediaGallery.jsx';
 
 const MediaGalleryLayout = () => {
     const media = useMovieStore((s) => s.media);
-    const location = useLocation(); // Détecte la route actuelle
+    const location = useLocation();
     
 
     let sectionTitle = "Recommended for you";

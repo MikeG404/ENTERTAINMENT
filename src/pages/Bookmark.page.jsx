@@ -4,11 +4,11 @@ import { useMovieStore } from "../stores/useMovieStore.js"
 
 
 const BookmarkPage = () => {
-    const media = useMovieStore((s) => s.media)
-    
-    // Filtrer les films bookmarkés par catégorie
-    const bookmarkedMovies = media.filter(m => m.isBookmarked && m.category === "Movie")
-    const bookmarkedSeries = media.filter(m => m.isBookmarked && m.category === "TV Series")
+    const getBookmarkedMedia = useMovieStore((s) => s.getBookmarkedMedia)
+    const bookMarkedMedia = getBookmarkedMedia()
+
+    const bookmarkedMovies = bookMarkedMedia.filter(m => m.category === "Movie")
+    const bookmarkedSeries = bookMarkedMedia.filter(m => m.category === "TV Series")
 
     return (
         <Fragment>

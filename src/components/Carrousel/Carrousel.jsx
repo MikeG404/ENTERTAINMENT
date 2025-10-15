@@ -3,11 +3,13 @@ import TrendingCard from '../Trending/TrendingCard/TrendingCard';
 import { useMovieStore } from '../../stores/useMovieStore';
 
 const Carrousel = () => {
-    const movies = useMovieStore((s) => s.movies)
+    const media = useMovieStore((s) => s.media)
+
+    const trendingMovie = media.filter((elem) => elem.category === "Movie")
 
     return (
         <div className={styles.carrousel}>
-            { movies.map((elem) => {
+            { trendingMovie.map((elem) => {
                 return <TrendingCard 
                     key={elem.id} 
                     id={elem.id} 
