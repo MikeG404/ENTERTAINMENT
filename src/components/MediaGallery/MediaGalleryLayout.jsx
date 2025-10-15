@@ -5,18 +5,19 @@ import MediaGallery from './MediaGallery.jsx';
 
 const MediaGalleryLayout = () => {
     const movies = useMovieStore((s) => s.movies);
+    const tvSeries = useMovieStore((s) => s.tvSeries);
     const location = useLocation(); // Détecte la route actuelle
     
-    // Définir le titre et filtrer les données selon la page
+
     let sectionTitle = "Recommended for you";
-    let filteredMovies = movies;
+    let mediaType = [];
     
     if (location.pathname === '/movies') {
         sectionTitle = "Movies";
-        // filteredMovies = movies.filter(m => m.category === "Movie");
+        mediaType = movies;
     } else if (location.pathname === '/series') {
         sectionTitle = "TV Series";
-        // filteredMovies = movies.filter(m => m.category === "TV Series");
+        mediaType = tvSeries;
     }
 
     return (
@@ -25,7 +26,7 @@ const MediaGalleryLayout = () => {
                 <Outlet />
             </Fragment>
             <MediaGallery 
-                movies={filteredMovies} 
+                movies={mediaType} 
                 sectionTitle={sectionTitle}
             />
         </Fragment>
