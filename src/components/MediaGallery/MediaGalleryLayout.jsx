@@ -10,7 +10,7 @@ const MediaGalleryLayout = () => {
     
 
     let sectionTitle = "Recommended for you";
-    let mediaType = [];
+    let mediaType = movies.concat(tvSeries);
     
     if (location.pathname === '/movies') {
         sectionTitle = "Movies";
