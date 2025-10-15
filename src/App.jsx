@@ -14,9 +14,9 @@ function App() {
 					<Route element={<MediaGalleryLayout />}>
 						<Route element={<TrendingGalleryLayout />}>
 							<Route index element={<HomePage />} />
+						</Route>
 							<Route path="/movies" element={<MoviePage />}></Route>
 							<Route path="/series" element={<SeriePage />}></Route>
-						</Route>
 					</Route>
 					<Route path="/bookmarks" element={<BookmarkPage />}></Route>
 				</Route>
