@@ -38,3 +38,25 @@
     }
 
 }
+
+@media screen and (min-width: 768px) {
+
+    .itemContainer {
+        height: 19.5rem;
+
+        .image {
+            height: 14rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .itemContainer {
+        height: 22.9rem;
+
+        .image {
+            height: 17.4rem;
+        }
+    }
+}
