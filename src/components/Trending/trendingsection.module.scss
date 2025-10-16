@@ -8,3 +8,10 @@
         @extend .text-preset-m1;
     }
 }
+
+
+@media screen and (min-width: 768px) {
+    .trendingContainer {
+        padding-left: var(--spacing-300);
+    }
+}

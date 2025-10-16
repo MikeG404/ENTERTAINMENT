@@ -15,3 +15,9 @@
         @extend .text-preset-m1;
     }
 }
+
+@media screen and (min-width: 768px) {
+    .searchBarContainer {
+            padding-inline: var(--spacing-300);
+    }
+}

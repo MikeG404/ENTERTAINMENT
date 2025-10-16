@@ -1,6 +1,32 @@
-.mediaGalleryContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-200);
-    padding: var(--spacing-200);
+.mediaGallerySection {
+
+    h2 {
+        padding-inline: var(--spacing-200);
+        padding-block: var(--spacing-200);
+    }
+
+    .mediaGalleryContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: var(--spacing-200);
+        gap: var(--spacing-200);
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    .mediaGallerySection {
+
+        h2 {
+            padding-inline: var(--spacing-300);
+            padding-block: var(--spacing-300);
+        }
+
+        .mediaGalleryContainer {
+            padding-inline: var(--spacing-300);
+        }
+    }
+
 }
