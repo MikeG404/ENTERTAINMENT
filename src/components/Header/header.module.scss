@@ -1,15 +1,22 @@
 .headerContainer {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-1000);
-    padding: var(--spacing-300);
-    align-items: center;
-    background-color: var(--blue-900);
+display: flex;
+justify-content: center;
+gap: var(--spacing-1000);
+padding: var(--spacing-300);
+align-items: center;
+background-color: var(--blue-900);
 
     .avatar img {
         width: 2.4rem;
         height: 2.4rem;
         border: 0.1rem solid white;
         border-radius: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .headerContainer {
+        margin: var(--spacing-300);
+        border-radius: var(--rounded);
     }
 }
