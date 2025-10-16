@@ -25,7 +25,19 @@
         }
 
         .mediaGalleryContainer {
+            grid-template-columns: repeat(3, 1fr);
             padding-inline: var(--spacing-300);
+        }
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    .mediaGallerySection {
+
+        .mediaGalleryContainer {
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 
