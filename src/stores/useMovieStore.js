@@ -42,15 +42,6 @@ export const useMovieStore = create(
           image: "https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
         },
         {
-          id: 5,
-          category: "Movie",
-          title: "Oppenheimer",
-          year: 2023,
-          genre: ["Biography", "Drama", "History"],
-          rating: 8.8,
-          image: "https://image.tmdb.org/t/p/w500/bafYWgFzQYvv7cM6B8HkPzKzK8f.jpg",
-        },
-        {
           id: 6,
           category: "Movie",
           title: "Inception",
@@ -66,7 +57,7 @@ export const useMovieStore = create(
           year: 1999,
           genre: ["Action", "Sci-Fi"],
           rating: 8.7,
-          image: "https://image.tmdb.org/t/p/w500/aOiCz2oF3Yw2bRzCQXDfZjZk6aa.jpg",
+          image: "https://image.tmdb.org/t/p/original/fNG7i7RqMErkcqhohV2a6cV1Ehy.jpg",
         },
         {
           id: 8,
@@ -75,7 +66,7 @@ export const useMovieStore = create(
           year: 2017,
           genre: ["Sci-Fi", "Thriller"],
           rating: 8.0,
-          image: "https://image.tmdb.org/t/p/w500/aMpyrCizvS2Dg3xnzj2y0mQ6Vhm.jpg",
+          image: "https://image.tmdb.org/t/p/original/c8iM9ipgkZNDSyfQYNSKBB7ORaG.jpg",
         },
         {
           id: 9,
@@ -129,7 +120,7 @@ export const useMovieStore = create(
           year: 2011,
           genre: ["Drama", "Sci-Fi", "Thriller"],
           rating: 8.8,
-          image: "https://image.tmdb.org/t/p/w500/p7oK6tKQp4v2a1V0kUQn4Xf0q2r.jpg",
+          image: "https://image.tmdb.org/t/p/original/dg3OindVAGZBjlT3xYKqIAdukPL.jpg",
         },
         {
           id: 15,
@@ -147,7 +138,7 @@ export const useMovieStore = create(
           year: 2019,
           genre: ["Action", "Comedy", "Crime"],
           rating: 8.7,
-          image: "https://image.tmdb.org/t/p/w500/mY7SeH4HFFxW1hiI6cWJ4O5U43u.jpg",
+          image: "https://image.tmdb.org/t/p/original/mGVrXeIjyecj6TKmwPVpHlscEmw.jpg",
         },
         {
           id: 17,
