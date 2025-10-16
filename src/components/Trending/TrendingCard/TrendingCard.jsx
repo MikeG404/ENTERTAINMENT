@@ -11,7 +11,6 @@ const TrendingCard = ({id, image, title, year }) => {
         <div className={styles.itemContainer}>
             <BookmarkButton isBookmarked={isBookmarked} onToggle={() => toggleBookmark(id)}/>
 
-            {/* TODO: NEW COMPONENTS HERE */}
             <div className={styles.cardInfos}>
                 <div className={styles.upperCardInfos}>
                     <p>{ year }</p>
