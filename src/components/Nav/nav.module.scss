@@ -14,3 +14,10 @@
         filter: brightness(0) invert(1);
     }
 }
+
+@media screen and (min-width: 1440px) {
+    .navContainer {
+        flex-direction: column;
+        flex: 1;
+    }
+}
