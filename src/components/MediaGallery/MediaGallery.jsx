@@ -4,7 +4,7 @@ import MediaCard from "./MediaCard/MediaCard";
 const MediaGallery = ({movies, sectionTitle}) => {
     return (
         <section className={styles.mediaGallerySection}>
-            <h2 className="text-preset-m1">{sectionTitle}</h2>
+            <h2 className={styles.heading}>{sectionTitle}</h2>
             <div className={styles.mediaGalleryContainer}>
                 {movies.map((movie) => {
                     return <MediaCard

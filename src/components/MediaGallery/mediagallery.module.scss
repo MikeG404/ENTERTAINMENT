@@ -1,6 +1,9 @@
-.mediaGallerySection {
+@use "../../index.scss";
+@use "../../mixins";
 
-    h2 {
+.mediaGallerySection {
+    .heading {
+        @include mixins.text-preset-m1;
         padding-inline: var(--spacing-200);
         padding-block: var(--spacing-200);
     }
@@ -13,13 +16,10 @@
     }
 }
 
-
-
 @media screen and (min-width: 768px) {
-
     .mediaGallerySection {
-
-        h2 {
+        .heading {
+            @include mixins.text-preset-2l;
             padding-inline: var(--spacing-300);
             padding-block: var(--spacing-300);
         }
@@ -29,7 +29,6 @@
             padding-inline: var(--spacing-300);
         }
     }
-
 }
 
 @media screen and (min-width: 1440px) {

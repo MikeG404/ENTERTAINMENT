@@ -7,7 +7,7 @@
     }
 
     .image:hover {
-        filter: brightness(0) invert(1);
+        filter: brightness(0) saturate(100%) invert(19%) sepia(94%) saturate(7500%) hue-rotate(-2deg) brightness(102%) contrast(110%);
     }
 
     .active {

@@ -1,11 +1,12 @@
 @use "../../index.scss";
+@use "../../mixins";
 
 .trendingContainer {
     padding-left: var(--spacing-200);   
     .title {
         color: white;
         padding-bottom: var(--spacing-200);
-        @extend .text-preset-m1;
+        @include mixins.text-preset-m1;
     }
 }
 
@@ -13,5 +14,9 @@
 @media screen and (min-width: 768px) {
     .trendingContainer {
         padding-left: var(--spacing-300);
+
+        .title {
+            @include mixins.text-preset-1;
+        }
     }
 }

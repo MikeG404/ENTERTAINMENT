@@ -1,4 +1,5 @@
 @use "../../../index.scss";
+@use "../../../mixins";
 
 .itemContainer {
     position: relative;
@@ -13,20 +14,21 @@
         
         .upperCardInfos {
             display: flex;
+            align-items: center;
             gap: var(--spacing-100);
-            width: 100%;
-            @extend .text-preset-m5;
+            @include mixins.text-preset-m5;
             opacity: 75%;
             padding-top: var(--spacing-100);
 
             .category {
                 display: flex;
+                align-items: center;
                 gap: var(--spacing-100);
             }
         }
 
         .title {
-            @extend .text-preset-m3;
+            @include mixins.text-preset-m3;
         }
     }
 
@@ -43,6 +45,16 @@
 
     .itemContainer {
         height: 19.5rem;
+
+        .cardInfos {
+            .upperCardInfos {
+                @include mixins.text-preset-5;
+            }
+
+            .title {
+                @include mixins.text-preset-3;
+            }
+        }
 
         .image {
             height: 14rem;
