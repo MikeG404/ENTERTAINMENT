@@ -1,168 +1,64 @@
-import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
+import { getMovies, getSeries, getTrendingMovies } from '../services/service';
 
 export const useMovieStore = create(
   persist(
     (set, get) => ({
-      media: [
-        {
-          id: 1,
-          category: "Movie",
-          title: "Interstellar",
-          year: 2014,
-          genre: ["Adventure", "Drama", "Sci-Fi"],
-          rating: 8.6,
-          image: "https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg",
-        },
-        {
-          id: 2,
-          category: "Movie",
-          title: "The Dark Knight",
-          year: 2008,
-          genre: ["Action", "Crime", "Drama"],
-          rating: 9.0,
-          image: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
-        },
-        {
-          id: 3,
-          category: "Movie",
-          title: "Parasite",
-          year: 2019,
-          genre: ["Comedy", "Drama", "Thriller"],
-          rating: 8.6,
-          image: "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
-        },
-        {
-          id: 4,
-          category: "Movie",
-          title: "Dune: Part One",
-          year: 2021,
-          genre: ["Adventure", "Sci-Fi"],
-          rating: 8.0,
-          image: "https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
-        },
-        {
-          id: 6,
-          category: "Movie",
-          title: "Inception",
-          year: 2010,
-          genre: ["Action", "Sci-Fi", "Thriller"],
-          rating: 8.8,
-          image: "https://image.tmdb.org/t/p/w500/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
-        },
-        {
-          id: 7,
-          category: "Movie",
-          title: "The Matrix",
-          year: 1999,
-          genre: ["Action", "Sci-Fi"],
-          rating: 8.7,
-          image: "https://image.tmdb.org/t/p/original/fNG7i7RqMErkcqhohV2a6cV1Ehy.jpg",
-        },
-        {
-          id: 8,
-          category: "Movie",
-          title: "Blade Runner 2049",
-          year: 2017,
-          genre: ["Sci-Fi", "Thriller"],
-          rating: 8.0,
-          image: "https://image.tmdb.org/t/p/original/c8iM9ipgkZNDSyfQYNSKBB7ORaG.jpg",
-        },
-        {
-          id: 9,
-          category: "TV Series",
-          title: "Breaking Bad",
-          year: 2008,
-          genre: ["Crime", "Drama", "Thriller"],
-          rating: 9.5,
-          image: "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
-        },
-        {
-          id: 10,
-          category: "TV Series",
-          title: "Game of Thrones",
-          year: 2011,
-          genre: ["Action", "Adventure", "Drama"],
-          rating: 9.2,
-          image: "https://image.tmdb.org/t/p/w500/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
-        },
-        {
-          id: 11,
-          category: "TV Series",
-          title: "The Last of Us",
-          year: 2023,
-          genre: ["Drama", "Horror", "Sci-Fi"],
-          rating: 8.8,
-          image: "https://image.tmdb.org/t/p/w500/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg",
-        },
-        {
-          id: 12,
-          category: "TV Series",
-          title: "Stranger Things",
-          year: 2016,
-          genre: ["Drama", "Fantasy", "Mystery"],
-          rating: 8.7,
-          image: "https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg",
-        },
-        {
-          id: 13,
-          category: "TV Series",
-          title: "Chernobyl",
-          year: 2019,
-          genre: ["Drama", "History", "Thriller"],
-          rating: 9.4,
-          image: "https://image.tmdb.org/t/p/w500/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg",
-        },
-        {
-          id: 14,
-          category: "TV Series",
-          title: "Black Mirror",
-          year: 2011,
-          genre: ["Drama", "Sci-Fi", "Thriller"],
-          rating: 8.8,
-          image: "https://image.tmdb.org/t/p/original/dg3OindVAGZBjlT3xYKqIAdukPL.jpg",
-        },
-        {
-          id: 15,
-          category: "TV Series",
-          title: "Peaky Blinders",
-          year: 2013,
-          genre: ["Crime", "Drama"],
-          rating: 8.8,
-          image: "https://image.tmdb.org/t/p/w500/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg",
-        },
-        {
-          id: 16,
-          category: "TV Series",
-          title: "The Boys",
-          year: 2019,
-          genre: ["Action", "Comedy", "Crime"],
-          rating: 8.7,
-          image: "https://image.tmdb.org/t/p/original/mGVrXeIjyecj6TKmwPVpHlscEmw.jpg",
-        },
-        {
-          id: 17,
-          category: "TV Series",
-          title: "Better Call Saul",
-          year: 2015,
-          genre: ["Crime", "Drama"],
-          rating: 9.0,
-          image: "https://image.tmdb.org/t/p/w500/fC2HDm5t0kHl7mTm7jxMR31b7by.jpg",
-        },
-      ],
+      media: [],
+      trending: [],
       bookmarks: [],
-      searchQuery: "",
-      setSearchQuery: (query) => set({ searchQuery: query }),
+      searchQuery: '',
+      isMediaLoading: false,
+      isTrendingLoading: false,
+      mediaError: null,
+      trendingError: null,
 
+      // Actions synchrones
+      setSearchQuery: (query) => set({ searchQuery: query }),
       toggleBookmark: (id) => {
         const { bookmarks } = get();
-        const exists = bookmarks.includes(id);
-        const next = exists
+        const next = bookmarks.includes(id)
           ? bookmarks.filter((b) => b !== id)
-          : [...bookmarks, id]
-
-        set({ bookmarks: next })
+          : [...bookmarks, id];
+        set({ bookmarks: next });
       },
       isBookmarked: (id) => get().bookmarks.includes(id),
 
-    })));
+      fetchTrending: async () => {
+        set({ isTrendingLoading: true, trendingError: null });
+        try {
+          const list = await getTrendingMovies();
+          set({ trending: list, isTrendingLoading: false });
+        } catch (e) { 
+          set({
+            trendingError: e.message ?? 'Erreur de chargement',
+            isTrendingLoading: false,
+          });
+        }
+      },
+
+      fetchMedia: async () => {
+        set({ isMediaLoading: true, mediaError: null});
+        try {
+          const moviesList = await getMovies();
+          const seriesList = await getSeries();
+          const mixedList = moviesList.concat(seriesList);
+          set({ media: mixedList, isMediaLoading: false});
+        } catch (e) {
+          set({
+            mediaError: e.message ?? 'Erreur de chargement',
+            isMediaLoading: false,
+          })
+        }
+      }
+    }),
+    {
+      name: 'movie-store',
+      partialize: (state) => ({
+        bookmarks: state.bookmarks,
+        searchQuery: state.searchQuery,
+      }),
+    }
+  )
+);

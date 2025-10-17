@@ -1,15 +1,19 @@
 import styles from './carrousel.module.scss'
 import TrendingCard from '../Trending/TrendingCard/TrendingCard';
 import { useMovieStore } from '../../stores/useMovieStore';
+import { useEffect } from 'react';
 
 const Carrousel = () => {
-    const media = useMovieStore((s) => s.media)
+    const trending = useMovieStore((s) => s.trending)
+    const fetchTrending = useMovieStore((s) => s.fetchTrending)
 
-    const trendingMovie = media.filter((elem) => elem.category === "Movie")
+    useEffect(() => {
+        fetchTrending();
+    },[fetchTrending])
 
     return (
         <div className={styles.carrousel}>
-            { trendingMovie.map((elem) => {
+            { trending.map((elem) => {
                 return <TrendingCard 
                     key={elem.id} 
                     id={elem.id} 
